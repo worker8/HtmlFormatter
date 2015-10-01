@@ -1,3 +1,4 @@
+package com.github.worker8.html_formatter;
 /**
  * Created by tanjunrong on 10/1/15.
  */
