@@ -1,4 +1,4 @@
-# HtmlFormatter
+# HtmlFormatter ![](https://img.shields.io/github/release/worker8/HtmlFormatter.svg?label=JitPack)
 A pure java convenience class to format String into Html String. It is aimed to be used with Android, but since it's pure Java, it should work fine outside Android land, but I'm not sure if there is such use case.
 
 # Example
