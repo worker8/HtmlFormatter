@@ -1,2 +1,2 @@
 rootProject.name = 'html_formatter'
-
+include 'html_formatter_library'

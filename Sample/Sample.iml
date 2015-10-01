@@ -8,5 +8,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="html_formatter_library" />
+    <orderEntry type="module" module-name="html_formatter" />
   </component>
 </module>
