@@ -1,5 +1,5 @@
-group 'com.favoritemedium'
-version '1.0-SNAPSHOT'
+group 'com.github.worker8'
+version '1.0.0'
 
 apply plugin: 'java'
 
