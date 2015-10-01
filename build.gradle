@@ -1,14 +1,59 @@
-group 'com.github.worker8'
-version '1.0.0'
+//group 'com.github.worker8'
+//version '1.0.0'
+//
+//apply plugin: 'java'
+//
+//sourceCompatibility = 1.5
+//
+//repositories {
+//    mavenCentral()
+//}
+//
+//dependencies {
+//    testCompile group: 'junit', name: 'junit', version: '4.11'
+//}
 
 apply plugin: 'java'
+apply plugin: 'maven'
 
-sourceCompatibility = 1.5
+group = 'com.github.worker8'
+version 'v1.0.0'
+sourceCompatibility = 1.8 // java 8
+targetCompatibility = 1.8
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
+
+task sourcesJar(type: Jar, dependsOn: classes) {
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+artifacts {
+    archives sourcesJar
+    archives javadocJar
+}
+
+// To specify a license in the pom:
+install {
+    repositories.mavenInstaller {
+        pom.project {
+            licenses {
+                license {
+                    name 'The Apache Software License, Version 2.0'
+                    url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    distribution 'repo'
+                }
+            }
+        }
+    }
 }
